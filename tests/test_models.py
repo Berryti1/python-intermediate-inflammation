@@ -23,7 +23,7 @@ def test_daily_mean(test, expected):
         ([[0, -1], [2001, 7], [-24, -4], [2, 28]], [2001, 28]),
         ([[12, 2], [-3, 4], [5, 6]], [12, 6]),
     ])
-def test_daily_mean(test, expected):
+def test_daily_max(test, expected):
     """Test max function works for zeroes, positive integers, mix of positive/negative integers."""
     from inflammation.models import daily_max
     npt.assert_array_equal(daily_max(np.array(test)), np.array(expected))
@@ -49,3 +49,4 @@ def test_daily_min_string():
 
     with pytest.raises(TypeError):
         error_expected = daily_min([['Hello', 'there'], ['General', 'Kenobi']])
+
