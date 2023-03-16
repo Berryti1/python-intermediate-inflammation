@@ -64,10 +64,10 @@ def patient_normalise(data):
     normalised[normalised < 0] = 0
     return normalised
 
-def patient_std_dev(data):
-    """Take the standard deviation of inflammation scores for a given patient of 
-     the course of the trial"""
-    return np.std(data, axis = 0)
+def daily_std_dev(data):
+    """Take the standard deviation of inflammation scores for a given day of
+     for all patients in the trial"""
+    return np.std(data, axis=1)
 
 def daily_above_threshold(patient_num, data, threshold):
     """Determine whether or not each daily inflammation value exceeds a given threshold for a given patient.
