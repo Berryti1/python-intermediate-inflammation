@@ -110,3 +110,4 @@ def test_patient_normalise(test, expected, expect_raises):
         """Test normalisation works for arrays of one and positive integers."""
         from inflammation.models import daily_std_dev
         npt.assert_almost_equal(daily_std_dev(np.array(test)), np.array(expected), decimal=2)
+        ##testing pull request
